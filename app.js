@@ -41,7 +41,7 @@ app.use("/api/v1/users", userRouter);  // it means in all the user routes this p
 app.use("/api/v1/task", taskRouter);
 
 app.get("/", (req, res) => {
-    res.send("It's Sunday");
+    res.send("This is a demo Home Page while developing Backend");
 });
 
 //using Error Middleware
