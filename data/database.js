@@ -7,8 +7,8 @@ export const connectDatabase = async () => {
     mongoose.connect(process.env.MONGODB_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true
-    }).then(() => {
-        console.log("Connected to database");
+    }).then((c) => {
+        console.log(`Database connected with ${c.connection.host}`);
     }).catch((error) => {
         console.log("Error connecting", error);
     });

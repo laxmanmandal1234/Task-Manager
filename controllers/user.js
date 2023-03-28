@@ -26,7 +26,7 @@ const registerNewUser =  async (req, res) => {
 }
 
 //Login user
-const loginUser = async (req, res) => {
+const loginUser = async (req, res, next) => {
     try {
         const { email, password } = req.body;
         let user = await User.findOne({ email }).select("+password");   //initially when creating user model, password field is set to select:false, so it wont be accessed by default with User.find()
